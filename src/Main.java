@@ -8,9 +8,9 @@ public class Main {
         while (amountSavings < 2459000) {
             month = month + 1;
             amountSavings = contribution * month;
-
+            System.out.println("Месяц " + month + ", сумма накоплений равна" + amountSavings + " рублей.");
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна" + amountSavings + " рублей.");
+
         //Task 2
         System.out.println("Task 2");
         int i = 1;
@@ -26,11 +26,12 @@ public class Main {
         //Task 3
         System.out.println("Task 3");
         int population = 12000000;
-        float birthRate = 0.017f;
-        float mortalityRate = 0.008f;
+        int birthRate = 17;
+        int mortalityRate = 8;
+        int dif=birthRate-mortalityRate;
         int year = 1;
         while (year <= 10) {
-            population = population + (int) (population * birthRate * year) - (int) (population * mortalityRate * year);
+            population += population * dif/1000;
             System.out.println("Год " + year + " ,численность населения составляет " + population);
             year++;
         }
@@ -39,9 +40,10 @@ public class Main {
         contribution = 15000;
         amountSavings = 0;
         month = 0;
+        float percent=0.07f;
         while (amountSavings < 12000000) {
             month++;
-            amountSavings = (contribution * month) + (int) (0.07 * contribution * month);
+            amountSavings = (contribution * month) + (int) (percent * contribution * month);
             System.out.println("Месяц " + month + ", сумма накоплений равна" + amountSavings + " рублей.");
         }
         //Task 5
@@ -49,9 +51,10 @@ public class Main {
         contribution = 15000;
         amountSavings = 0;
         month = 0;
+        percent=0.07f;
         while (amountSavings < 12000000) {
             month++;
-            amountSavings = (contribution * month) + (int) (0.07 * contribution * month);
+            amountSavings = (contribution * month) + (int) (percent * contribution * month);
             if (month % 6 == 0)
                 System.out.println("Месяц " + month + ", сумма накоплений равна" + amountSavings + " рублей.");
         }
@@ -60,9 +63,10 @@ public class Main {
         contribution = 15000;
         amountSavings = 0;
         month = 0;
+        percent=0.07f;
         while (month < 108) {
             month++;
-            amountSavings = (contribution * month) + (int) (0.07 * contribution * month);
+            amountSavings = (contribution * month) + (int) (percent * contribution * month);
             if (month % 6 == 0)
                 System.out.println("Месяц " + month + ", сумма накоплений равна" + amountSavings + " рублей.");
         }
